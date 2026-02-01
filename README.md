@@ -1,0 +1,1 @@
+Hello again! this is a work in progress, so far only creating weapons/kits in splatoon 3 as this is a VERY monotonous task, but shouldn't be too difficualt as its already like a 1/5 of the way done 
