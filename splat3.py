@@ -1,12 +1,12 @@
 import time
 
-from wpn_class.Splatoon.Blasters import Blasters;from wpn_class.Splatoon.Brushes import Brushes;from wpn_class.Splatoon.Chargers import Chargers #Splatoon
-from wpn_class.Splatoon.Rollers import Rollers;from wpn_class.Splatoon.Shooters import *;from wpn_class.Splatoon.Sloshers import Sloshers #One
-from wpn_class.Splatoon.Splatlings import Splatlings #Classes
+from wpn_class.Splatoon.Blasters import *;from wpn_class.Splatoon.Brushes import *;from wpn_class.Splatoon.Chargers import * #Splatoon
+from wpn_class.Splatoon.Rollers import *;from wpn_class.Splatoon.Shooters import *;from wpn_class.Splatoon.Sloshers import * #One
+from wpn_class.Splatoon.Splatlings import * #Classes
 
-from wpn_class.Splatoon2.Brellas import Brellas;from wpn_class.Splatoon2.Dualies import Dualies #Splatoon 2 Classes
+from wpn_class.Splatoon2.Brellas import *;from wpn_class.Splatoon2.Dualies import * #Splatoon 2 Classes
 
-from wpn_class.Splatoon3.Splatanas import Splatanas;from wpn_class.Splatoon3.Stringers import Stringers #Splatoon 3 Classes
+from wpn_class.Splatoon3.Splatanas import *;from wpn_class.Splatoon3.Stringers import * #Splatoon 3 Classes
 
 
 def splat3():
@@ -20,25 +20,25 @@ def splat3():
         case "1":
             Shooters_3()
         case "2":
-            Rollers()
+            Rollers_3()
         case "3":
-            Chargers()
+            Chargers_3()
         case "4":
-            Sloshers()
+            Sloshers_3()
         case "5":
-            Splatlings()
+            Splatlings_3()
         case "6":
-            Blasters()
+            Blasters_3()
         case "7":
-            Brushes()
+            Brushes_3()
         case "8":
-            Dualies()
+            Dualies_3()
         case "9":
-            Brellas()
+            Brellas_3()
         case "10":
-            Stringers()
+            Stringers_3()
         case "11":
-            Splatanas()
+            Splatanas_3()
         case _:
             print("There is no weapon class here")
             time.sleep(2)

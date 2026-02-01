@@ -168,10 +168,10 @@ def Shooters_3():
                 wpn_special = "Zipcaster"
             case "19":
                 wpn_special = "Triple splashdown"
-    print(wpn_name)
-    print(wpn_range)
-    print(wpn_dmg)
-    print(wpn_fr)
-    print(wpn_brand)
-    print(wpn_sub)
-    print(wpn_special)
+    print("Name:", wpn_name)
+    print("Range:", wpn_range)
+    print("Damage:", wpn_dmg)
+    print("Fire rate:", wpn_fr)
+    print("Brand:", wpn_brand)
+    print("Sub:", wpn_sub)
+    print("Special:", wpn_special)
