@@ -26,53 +26,75 @@ def Chargers_3():
             type = input()
             match type:
                 case "1":
-                    wpn_name = input("What do you want your Squiffer to be called?")
+                    wpn_tpe = "Squiffer"
                     wpn_range = 75
                     wpn_crgspd = 70
                     wpn_mob = 60
                 case "2":
-                    wpn_name = input("What do you want your Splat Charger to be called?")
+                    wpn_tpe = "Splat Charger"
                     wpn_range = 88
                     wpn_crgspd = 50
                     wpn_mob = 40
                 case "3":
-                    wpn_name = input("What do you want your Splatscope to be called?")
+                    wpn_tpe = "Splatscope"
                     wpn_range = 91
                     wpn_crgspd = 50
                     wpn_mob = 30
                 case "4":
-                    wpn_name = input("What do you want your E-liter to be called?")
+                    wpn_tpe = "E-liter"
                     wpn_range = 96
                     wpn_crgspd = 20
                     wpn_mob = 15
                 case "5":
-                    wpn_name = input("What do you want your E-literscope to be called?")
+                    wpn_tpe = "E-literscope"
                     wpn_range = 100
                     wpn_crgspd = 20
                     wpn_mob = 5
                 case "6":
-                    wpn_name = input("What do you want your Bamboozler to be called?")
+                    wpn_tpe = "Bamboozler"
                     wpn_range = 78
                     wpn_crgspd = 90
                     wpn_mob = 80
                 case "7":
-                    wpn_name = input("What do you want your GooTuber to be called?")
+                    wpn_tpe = "GooTuber"
                     wpn_range = 78
                     wpn_crgspd = 38
                     wpn_mob = 70
                 case "8":
-                    wpn_name = input("What do you want your Snipewriter to be called?")
+                    wpn_tpe = "Snipewriter"
                     wpn_range = 91
                     wpn_crgspd = 43
                     wpn_mob = 80
+                case _:
+                    print("Theres no Type here")
+                    Chargers_3()
+            print("What do you want your", wpn_tpe, "to be called?")
+            wpn_name = input()
+        case _:
+            print("Nuttin' 'ere")
+            Chargers_3()
     brand_class.brands.brands_3()
     subs_and_specials_class.subs.subs_3()
     subs_and_specials_class.specials.specials_3()
     print("Name:", wpn_name)
     print("Range:", wpn_range)
     print("Charge Speed:", wpn_crgspd)
-    print("Mobilty:", wpn_mob)
+    print("Mobility:", wpn_mob)
+    print("Type:", wpn_tpe)
     print("Brand:", brand_class.brands.wpn_brand)
     print("Sub:", subs_and_specials_class.subs.wpn_sub)
     print("Special:", subs_and_specials_class.specials.wpn_special)
+    print("Would ypu like to save the file?(Y/N)")
+    print("Warning: this will override ANY contents in a file if that file already exists, so keep names unqiue")
+    type = input()
+    filenum = 1
+    match type:
+        case "Y":
+            file = open(f"Chargers/{wpn_name}.txt", "w")
+            file.close()
+            with open(f"Chargers/{wpn_name}.txt", "r") as weapon_file:
+                stats = weapon_file.readlines()
+            stats = "Name:", wpn_name, "\n", "Range:", str(wpn_range), "\n", "Charge speed:", str(wpn_crgspd), "\n", "Mobility:", str(wpn_mob), "\n", "Type:", wpn_tpe, "\n","Brand:", brand_class.brands.wpn_brand, "\n", "Sub:", subs_and_specials_class.subs.wpn_sub, "\n", "Special:", subs_and_specials_class.specials.wpn_special, "\n"
+            with open(f"Chargers/{wpn_name}.txt", "w") as weapon_file:
+                weapon_file.writelines(stats)
     

@@ -23,25 +23,33 @@ def Brellas_3():
             type = input()
             match type:
                 case "1":
-                    wpn_name = input("What do you want your Splat Brella to be called?")
+                    wpn_tpe = "Splat Brella"
                     wpn_range = 43
                     wpn_dmg = 65
                     wpn_dur = 60
                 case "2":
-                    wpn_name = input("What do you want your Tenta Brella to be called?")
+                    wpn_tpe = "Tenta Brella"
                     wpn_range = 62
                     wpn_dmg = 85
                     wpn_dur = 85
                 case "3":
-                    wpn_name = input("What do you want your Undercover Brella to be called?")
+                    wpn_tpe = "Undercover Brella"
                     wpn_range = 50
                     wpn_dmg = 30
                     wpn_dur = 25
                 case "4":
-                    wpn_name = input("What do you want your Recycled Brella to be called?")
+                    wpn_tpe = "Recycled Brella"
                     wpn_range = 56
                     wpn_dmg = 75
                     wpn_dur = 19
+                case _:
+                    print("Theres no Type here")
+                    Brellas_3()
+            print("What do you want your", wpn_tpe, "to be called?")
+            wpn_name = input()
+        case _:
+            print("Nuttin' 'ere")
+            Brellas_3()
     brand_class.brands.brands_3()
     subs_and_specials_class.subs.subs_3()
     subs_and_specials_class.specials.specials_3()
@@ -49,6 +57,20 @@ def Brellas_3():
     print("Range:", wpn_range)
     print("Damage:", wpn_dmg)
     print("Durabilty:", wpn_dur)
+    print("Type:", wpn_tpe)
     print("Brand:", brand_class.brands.wpn_brand)
     print("Sub:", subs_and_specials_class.subs.wpn_sub)
     print("Special:", subs_and_specials_class.specials.wpn_special)
+    print("Would ypu like to save the file?(Y/N)")
+    print("Warning: this will override ANY contents in a file if that file already exists, so keep names unqiue")
+    type = input()
+    filenum = 1
+    match type:
+        case "Y":
+            file = open(f"Brellas/{wpn_name}.txt", "w")
+            file.close()
+            with open(f"Brellas/{wpn_name}.txt", "r") as weapon_file:
+                stats = weapon_file.readlines()
+            stats = "Name:", wpn_name, "\n", "Range:", str(wpn_range), "\n", "Damage:", str(wpn_dmg), "\n", "Durability:", str(wpn_dur), "\n", "Type:", wpn_tpe, "\n","Brand:", brand_class.brands.wpn_brand, "\n", "Sub:", subs_and_specials_class.subs.wpn_sub, "\n", "Special:", subs_and_specials_class.specials.wpn_special, "\n"
+            with open(f"Brellas/{wpn_name}.txt", "w") as weapon_file:
+                weapon_file.writelines(stats)

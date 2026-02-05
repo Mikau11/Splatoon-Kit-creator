@@ -26,41 +26,48 @@ def Blasters_3():
             type = input()
             match type:
                 case "1":
-                    wpn_name = input("What do you want your Luna Blaster to be called?")
+                    wpn_tpe = "Luna Blaster"
                     wpn_range = 18
                     wpn_imp = 70
                     wpn_fr = 30
                 case "2":
-                    wpn_name = input("What do you want your Blaster to be called?")
+                    wpn_tpe = "Blaster"
                     wpn_range = 27
                     wpn_imp = 70
                     wpn_fr = 20
                 case "3":
-                    wpn_name = input("What do you want your Range Blaster to be called?")
+                    wpn_tpe = "Range Blaster"
                     wpn_range = 56
                     wpn_imp = 70
                     wpn_fr = 10
                 case "4":
-                    wpn_name = input("What do you want your Clash Blaster to be called?")
+                    wpn_tpe = "Clash Blaster"
                     wpn_range = 21
                     wpn_imp = 30
                     wpn_fr = 65
                 case "5":
-                    wpn_name = input("What do you want your Rapid Blaster to be called?")
+                    wpn_tpe = "Rapid Blaster"
                     wpn_range = 62
                     wpn_imp = 35
                     wpn_fr = 40
                 case "6":
-                    wpn_name = input("What do you want your Rapid Blaster Pro to be called?")
+                    wpn_tpe = "Rapid Blaster Pro"
                     wpn_range = 72
                     wpn_imp = 35
                     wpn_fr = 30
                 case "7":
-                    wpn_name = input("What do you want your S-BLAST to be called?")
+                    wpn_tpe = "S-BLAST"
                     wpn_range = 45
                     wpn_imp = 70
                     wpn_fr = 15
-
+                case _:
+                    print("Theres no Type here")
+                    Blasters_3()
+            print("What do you want your", wpn_tpe, "to be called?")
+            wpn_name = input()
+        case _:
+            print("Nuttin' 'ere")
+            Blasters_3()
     brand_class.brands.brands_3()
     subs_and_specials_class.subs.subs_3()
     subs_and_specials_class.specials.specials_3()
@@ -68,7 +75,21 @@ def Blasters_3():
     print("Range:", wpn_range)
     print("Impact:", wpn_imp)
     print("Fire rate:", wpn_fr)
+    print("Type:", wpn_tpe)
     print("Brand:", brand_class.brands.wpn_brand)
     print("Sub:", subs_and_specials_class.subs.wpn_sub)
     print("Special:", subs_and_specials_class.specials.wpn_special)
+    print("Would ypu like to save the file?(Y/N)")
+    print("Warning: this will override ANY contents in a file if that file already exists, so keep names unqiue")
+    type = input()
+    filenum = 1
+    match type:
+        case "Y":
+            file = open(f"Blasters/{wpn_name}.txt", "w")
+            file.close()
+            with open(f"Blasters/{wpn_name}.txt", "r") as weapon_file:
+                stats = weapon_file.readlines()
+            stats = "Name:", wpn_name, "\n", "Range:", str(wpn_range), "\n", "Impact:", str(wpn_imp), "\n", "Fire rate:", str(wpn_fr), "\n", "Type:", wpn_tpe, "\n","Brand:", brand_class.brands.wpn_brand, "\n", "Sub:", subs_and_specials_class.subs.wpn_sub, "\n", "Special:", subs_and_specials_class.specials.wpn_special, "\n"
+            with open(f"Blasters/{wpn_name}.txt", "w") as weapon_file:
+                weapon_file.writelines(stats)
     
