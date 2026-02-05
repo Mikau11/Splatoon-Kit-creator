@@ -1,0 +1,8 @@
+Name:My_Splatling
+Range:62
+Charge speed:80
+Mobility:90
+Type:Mini Splatling
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

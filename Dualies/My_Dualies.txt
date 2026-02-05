@@ -1,0 +1,8 @@
+Name:My_Dualies
+Range:50
+Damage:29
+Mobility:60
+Type:Splat Dualies
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

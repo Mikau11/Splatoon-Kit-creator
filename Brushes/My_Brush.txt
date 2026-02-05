@@ -1,0 +1,8 @@
+Name:My_Brush
+Range:5
+Ink speed:100
+Handling:100
+Type:Inkbrush
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

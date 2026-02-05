@@ -1,0 +1,8 @@
+Name:My_Charger
+Range:88
+Charge speed:50
+Mobility:40
+Type:Splat Charger
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

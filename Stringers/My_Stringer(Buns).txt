@@ -1,0 +1,8 @@
+Name:My_Stringer(Buns)
+Range:88
+Charge speed:40
+Mobility:40
+Type:Tri-Stringer
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

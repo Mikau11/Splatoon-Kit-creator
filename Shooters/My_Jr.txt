@@ -1,0 +1,8 @@
+Name:My_Jr
+Range:36
+Damage:22
+Fire rate:75
+Type:Splattershot jr
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

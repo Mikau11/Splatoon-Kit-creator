@@ -1,0 +1,8 @@
+Name:My_Roller
+Range:48
+Ink speed:45
+Handling:55
+Type:Splat roller
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

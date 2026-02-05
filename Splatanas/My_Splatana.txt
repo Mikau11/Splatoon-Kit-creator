@@ -1,0 +1,8 @@
+Name:My_Splatana
+Range:58
+Damage:29
+Handling:75
+Type:Splatana Wiper
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler

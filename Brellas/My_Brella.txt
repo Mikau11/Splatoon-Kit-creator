@@ -1,0 +1,8 @@
+Name:My_Brella
+Range:43
+Damage:65
+Durability:60
+Type:Splat Brella
+Brand:None
+Sub:Splat bomb
+Special:Big bubbler
