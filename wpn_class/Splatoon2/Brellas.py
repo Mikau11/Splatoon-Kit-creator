@@ -38,7 +38,7 @@ def Brellas_3():
                     wpn_dmg = 30
                     wpn_dur = 25
                 case "4":
-                    wpn_tpe = "Recycled Brella"
+                    wpn_tpe = "Recycled Brella"#
                     wpn_range = 56
                     wpn_dmg = 75
                     wpn_dur = 19
